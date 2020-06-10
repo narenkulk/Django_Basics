@@ -1,4 +1,6 @@
-This is my home page {% for project in projects %}
+{% load static %}
+<img src="{% static 'portfolio/DR_ALTEA.jpg' %}" height="300" width="200" />
+{% for project in projects %}
 <h2>Project title is {{ project.title }}</h2>
 <h2>Project description is {{ project.description }}</h2>
 <img src="{{ project.image.url }}" height="200" width="400" />
