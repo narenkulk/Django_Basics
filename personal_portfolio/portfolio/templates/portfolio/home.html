@@ -1,5 +1,9 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
 {% load static %}
 <img src="{% static 'portfolio/DR_ALTEA.jpg' %}" height="300" width="200" />
+<a href="{% url 'blog:all_blogs' %}">My Blogs</a>
 {% for project in projects %}
 <h2>Project title is {{ project.title }}</h2>
 <h2>Project description is {{ project.description }}</h2>
@@ -8,3 +12,6 @@
 {% if project.url %}
 <a href="{{ project.url }}">Project URL</a>
 {% endif %} {% endfor %}
+
+{% endblock %}
+
